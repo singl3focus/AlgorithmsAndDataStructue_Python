@@ -2,7 +2,7 @@ import time
 from main import DoublyLinkedList
 
 
-class BenchmarkDoublyLinkedListBenchmarks:
+class DoublyLinkedListBenchmarks:
     def __init__(self):
         self.dll = DoublyLinkedList()
 
@@ -40,7 +40,7 @@ class BenchmarkDoublyLinkedListBenchmarks:
 
 
 if __name__ == '__main__':
-    dll = BenchmarkDoublyLinkedListBenchmarks()
+    dll = DoublyLinkedListBenchmarks()
     dll.benchmark_remove()
     dll.benchmark_get()
     dll.benchmark_push_tail()

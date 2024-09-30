@@ -7,7 +7,7 @@ class IndexOutOfRange(Exception):
     pass
 
 
-class IncorectShiftParam(Exception):
+class IncorrectShiftParam(Exception):
     pass
 
 
@@ -137,9 +137,9 @@ class DoublyLinkedList(Generic[T]):
 
     def shift(self, direct: str, n: int) -> None:
         if n < 0:
-            raise IncorectShiftParam("Offset param must be more 0")
+            raise IncorrectShiftParam("Offset param must be more 0")
         elif n == 0:
-            raise IncorectShiftParam("Offset is empty")
+            raise IncorrectShiftParam("Offset is empty")
 
         empty_element = 0
         match direct:
@@ -150,5 +150,5 @@ class DoublyLinkedList(Generic[T]):
                 for _ in range(0, n):
                     self.push_tail(empty_element)
             case _:
-                raise IncorectShiftParam("Avaliable direct: right/left")
+                raise IncorrectShiftParam("Avaliable direct: right/left")
 
